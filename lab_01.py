@@ -2,10 +2,11 @@
 # точки заданного множества, у которых прямая, проходящая через две вершины треугольника, проходит и через центр окружности. Среди найденных
 # окружностей выбрать ту, для которой искомая прямая образует минимальный угол с осью ординат. Сделать в граф. режиме вывод изображения.
 
+import copy
+import traceback
+from math import acos, degrees, fabs, sqrt
 from tkinter import *
 from tkinter import messagebox, ttk
-import traceback, copy
-from math import fabs, degrees, acos, sqrt
 
 def add():
 	AddWin = Tk()
@@ -450,7 +451,7 @@ def draw():
 						point_x, point_y = okr(points[i][0], points[i][1], points[j][0], points[j][1], points[k][0], points[k][1])
 					except ZeroDivisionError:
 						continue
-					
+
 					point = [point_x, point_y]
 					radius = distance_from_point(point, points[i])
 

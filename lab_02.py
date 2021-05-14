@@ -1,7 +1,8 @@
+import copy
+from math import *
 from tkinter import *
 from tkinter import messagebox
-from math import *
-import copy
+
 import numpy as np
 
 root = Tk()
