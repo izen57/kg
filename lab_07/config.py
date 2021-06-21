@@ -1,6 +1,6 @@
 MAIN_COLOUR = "#999999"
-ADD_COLOUR = "#EEEEEE"
-CANVAS_COLOUR = "#FFFFFF"
+ADD_COLOUR = "#eeeeee"
+CANVAS_COLOUR = "#ffffff"
 DEFAULT_COLOUR = "#000000" 
 
 WINDOW_WIDTH = 1520
@@ -30,16 +30,15 @@ FIELD_BORDER_PART = 0.03
 
 
 class Point:
-    def __init__(self, x=0, y=0, colour="#FFFFFF"):
-        self.x = x
-        self.y = y
-        self.colour = colour
+	def __init__(self, x = 0, y = 0, colour = "#ffffff"):
+		self.x = x
+		self.y = y
+		self.colour = colour
 
 
 MODES = ["Без задержки", "С задержкой"]
 
-INFORMATION = '''\
-Цвет по умолчанию: #000000 (черный)
+INFORMATION = '''Цвет по умолчанию: #000000 (черный)
 Замер времени проводится...'''
 
 
