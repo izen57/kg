@@ -243,154 +243,115 @@ rect_color_label = tk.Label(data_frame, text = "Цвет регулярного 
 	fg = cfg.ADD_COLOUR, relief = tk.GROOVE)
 sect_color_label = tk.Label(data_frame, text = "Цвет отрезков", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
 	relief = tk.GROOVE)
-res_color_label = tk.Label(data_frame, text="Цвет результата", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-						   fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-rect_label = tk.Label(data_frame, text="Ввод границ отсекателя", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-rect_left_label = tk.Label(data_frame, text="Левая", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-rect_right_label = tk.Label(data_frame, text="Правая", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-rect_up_label = tk.Label(data_frame, text="Верхняя", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-rect_down_label = tk.Label(data_frame, text="Нижняя", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-vertex_label = tk.Label(data_frame, text="Ввод вершины", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-x_label = tk.Label(data_frame, text="x", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
-y_label = tk.Label(data_frame, text="y", font=("Consolas", 14), bg=cfg.MAIN_COLOUR,
-					  fg=cfg.ADD_COLOUR, relief=tk.GROOVE)
+res_color_label = tk.Label(data_frame, text = "Цвет результата", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+rect_label = tk.Label(data_frame, text = "Ввод границ отсекателя", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+rect_left_label = tk.Label(data_frame, text = "Левая", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+rect_right_label = tk.Label(data_frame, text = "Правая", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+rect_up_label = tk.Label(data_frame, text = "Верхняя", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+rect_down_label = tk.Label(data_frame, text = "Нижняя", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+vertex_label = tk.Label(data_frame, text = "Ввод вершины", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	relief = tk.GROOVE)
+x_label = tk.Label(data_frame, text = "x", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR, relief = tk.GROOVE)
+y_label = tk.Label(data_frame, text = "y", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR, relief = tk.GROOVE)
 
+rect_left_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
+rect_right_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
+rect_up_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
+rect_down_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
+x_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
+y_entry = tk.Entry(data_frame, bg = cfg.ADD_COLOUR, font = ("Consolas", 13), fg = cfg.MAIN_COLOUR, justify = "center")
 
-rect_left_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-rect_right_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-rect_up_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-rect_down_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-x_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-y_entry = tk.Entry(data_frame, bg=cfg.ADD_COLOUR, font=("Consolas", 13),
-				   fg=cfg.MAIN_COLOUR, justify="center")
-
-
-rect_btn = tk.Button(data_frame, text="Применить", font=("Consolas", 14),
-					  bg=cfg.MAIN_COLOUR, fg=cfg.ADD_COLOUR, command=read_rect,
-					  activebackground=cfg.ADD_COLOUR, activeforeground=cfg.MAIN_COLOUR)
-vertex_btn = tk.Button(data_frame, text="Применить", font=("Consolas", 14),
-					  bg=cfg.MAIN_COLOUR, fg=cfg.ADD_COLOUR, command=read_vertex,
-					  activebackground=cfg.ADD_COLOUR, activeforeground=cfg.MAIN_COLOUR)
-solve_btn = tk.Button(data_frame, text="Отсечь", font=("Consolas", 14),
-					  bg=cfg.MAIN_COLOUR, fg=cfg.ADD_COLOUR, command=solve,
-					  activebackground=cfg.ADD_COLOUR, activeforeground=cfg.MAIN_COLOUR)
-info_btn = tk.Button(data_frame, text="Информация", font=("Consolas", 14),
-					 bg=cfg.MAIN_COLOUR, fg=cfg.ADD_COLOUR, command=show_info,
-					 activebackground=cfg.ADD_COLOUR, activeforeground=cfg.MAIN_COLOUR)
-rect_color_btn = tk.Button(data_frame, text="", font=("Consolas", 14),
-						   bg=cfg.DEFAULT_COLOUR, fg=cfg.ADD_COLOUR, command=change_rect_color,
-						   relief=tk.GROOVE)
-sect_color_btn = tk.Button(data_frame, text="", font=("Consolas", 14),
-						   bg=cfg.DEFAULT_COLOUR, fg=cfg.ADD_COLOUR, command=change_sect_color,
-						   relief=tk.GROOVE)
-res_color_btn = tk.Button(data_frame, text="", font=("Consolas", 14),
-						  bg=cfg.DEFAULT_COLOUR, fg=cfg.ADD_COLOUR, command=change_res_color,
-						  relief=tk.GROOVE)
-clear_btn = tk.Button(data_frame, text="Очистить поле", font=("Consolas", 14),
-					  bg=cfg.MAIN_COLOUR, fg=cfg.ADD_COLOUR, command=clear_all,
-					  activebackground=cfg.ADD_COLOUR, activeforeground=cfg.MAIN_COLOUR)
+rect_btn = tk.Button(data_frame, text = "Применить", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	command = read_rect, activebackground = cfg.ADD_COLOUR, activeforeground = cfg.MAIN_COLOUR)
+vertex_btn = tk.Button(data_frame, text = "Применить", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	command = read_vertex, activebackground = cfg.ADD_COLOUR, activeforeground = cfg.MAIN_COLOUR)
+solve_btn = tk.Button(data_frame, text = "Отсечь", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	command = solve, activebackground = cfg.ADD_COLOUR, activeforeground = cfg.MAIN_COLOUR)
+info_btn = tk.Button(data_frame, text = "Информация", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	command = show_info, activebackground = cfg.ADD_COLOUR, activeforeground = cfg.MAIN_COLOUR)
+rect_color_btn = tk.Button(data_frame, text = "", font = ("Consolas", 14), bg = cfg.DEFAULT_COLOUR, fg = cfg.ADD_COLOUR,
+	command = change_rect_color, relief = tk.GROOVE)
+sect_color_btn = tk.Button(data_frame, text = "", font = ("Consolas", 14), bg = cfg.DEFAULT_COLOUR, fg = cfg.ADD_COLOUR,
+	command = change_sect_color, relief = tk.GROOVE)
+res_color_btn = tk.Button(data_frame, text = "", font = ("Consolas", 14), bg = cfg.DEFAULT_COLOUR, fg = cfg.ADD_COLOUR,
+	command = change_res_color, relief = tk.GROOVE)
+clear_btn = tk.Button(data_frame, text = "Очистить поле", font = ("Consolas", 14), bg = cfg.MAIN_COLOUR, fg = cfg.ADD_COLOUR,
+	command = clear_all, activebackground = cfg.ADD_COLOUR, activeforeground = cfg.MAIN_COLOUR)
 
 offset = 0
 
-rect_color_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_color_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH, height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-rect_color_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-				 width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+rect_color_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 1
 
-
-sect_color_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+sect_color_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH, height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-sect_color_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-				 width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+sect_color_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 1
 
-res_color_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+res_color_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH, height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-res_color_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-				 width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+res_color_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 2
 
-rect_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH, height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-rect_left_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
-rect_right_label.place(x=cfg.DATA_WIDTH // 2, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_left_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, height = cfg.DATA_HEIGHT // cfg.ROWS)
+rect_right_label.place(x = cfg.DATA_WIDTH // 2, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2,
+	height=cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-rect_left_entry.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
-rect_right_entry.place(x=cfg.DATA_WIDTH // 2, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_left_entry.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, height = cfg.DATA_HEIGHT // cfg.ROWS)
+rect_right_entry.place(x = cfg.DATA_WIDTH // 2, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, 
+	height = cfg.DATA_HEIGHT // cfg.ROWS)
 
 offset += 1
-rect_up_label.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
-rect_down_label.place(x=cfg.DATA_WIDTH // 2, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_up_label.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, height = cfg.DATA_HEIGHT // cfg.ROWS)
+rect_down_label.place(x = cfg.DATA_WIDTH // 2, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2,
+	height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-rect_up_entry.place(x=0, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
-rect_down_entry.place(x=cfg.DATA_WIDTH // 2, y=cfg.DATA_HEIGHT * offset // cfg.ROWS, width=cfg.DATA_WIDTH // 2,
-					   height=cfg.DATA_HEIGHT // cfg.ROWS)
+rect_up_entry.place(x = 0, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, height = cfg.DATA_HEIGHT // cfg.ROWS)
+rect_down_entry.place(x = cfg.DATA_WIDTH // 2, y = cfg.DATA_HEIGHT * offset // cfg.ROWS, width = cfg.DATA_WIDTH // 2, height = cfg.DATA_HEIGHT // cfg.ROWS)
 offset += 1
-rect_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+rect_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 2
 
-vertex_label.place(x=0, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+vertex_label.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 1
-x_label.place(x=0, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH // 4, height=cfg.SLOT_HEIGHT)
-x_entry.place(x=1 * cfg.DATA_WIDTH // 4, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH // 4,
-			  height=cfg.SLOT_HEIGHT)
-y_label.place(x=2 * cfg.DATA_WIDTH // 4, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH // 4,
-			  height=cfg.SLOT_HEIGHT)
-y_entry.place(x=3 * cfg.DATA_WIDTH // 4, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH // 4,
-			  height=cfg.SLOT_HEIGHT)
+x_label.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH // 4, height = cfg.SLOT_HEIGHT)
+x_entry.place(x = 1 * cfg.DATA_WIDTH // 4, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH // 4, height = cfg.SLOT_HEIGHT)
+y_label.place(x = 2 * cfg.DATA_WIDTH // 4, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH // 4, height = cfg.SLOT_HEIGHT)
+y_entry.place(x = 3 * cfg.DATA_WIDTH // 4, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH // 4, height = cfg.SLOT_HEIGHT)
 offset += 1
-vertex_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset, width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
-
+vertex_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 
 offset = cfg.ROWS - 3
 
-solve_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-				width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+solve_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 1
 
-clear_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-				width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+clear_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 offset += 1
 
-info_btn.place(x=0, y=cfg.SLOT_HEIGHT * offset,
-			   width=cfg.DATA_WIDTH, height=cfg.SLOT_HEIGHT)
+info_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 
-
-canvas_frame = tk.Frame(root, bg="white")
-canvas = tk.Canvas(canvas_frame, bg="white")
+canvas_frame = tk.Frame(root, bg = "white")
+canvas = tk.Canvas(canvas_frame, bg = "white")
 canvas.bind("<Button-1>", left_click)
 root.bind("<Return>", return_click)
 canvas.bind("<Button-3>", right_click)
 
-canvas_frame.place(x=3 * cfg.BORDERS_WIDTH + cfg.DATA_WIDTH, y=cfg.BORDERS_HEIGHT,
-				   width=cfg.FIELD_WIDTH, height=cfg.FIELD_HEIGHT)
+canvas_frame.place(x = 3 * cfg.BORDERS_WIDTH + cfg.DATA_WIDTH, y = cfg.BORDERS_HEIGHT, width = cfg.FIELD_WIDTH,
+	height = cfg.FIELD_HEIGHT)
 
-canvas.place(x=0, y=0, width=cfg.FIELD_WIDTH, height=cfg.FIELD_HEIGHT)
+canvas.place(x = 0, y = 0, width = cfg.FIELD_WIDTH, height = cfg.FIELD_HEIGHT)
 
-print("Canvas params: ", cfg.FIELD_WIDTH, "x", cfg.FIELD_HEIGHT, sep='')
+print("Canvas params: ", cfg.FIELD_WIDTH, "x", cfg.FIELD_HEIGHT, sep = '')
 
 root.mainloop()
