@@ -347,7 +347,6 @@ offset += 1
 
 info_btn.place(x = 0, y = cfg.SLOT_HEIGHT * offset, width = cfg.DATA_WIDTH, height = cfg.SLOT_HEIGHT)
 
-
 canvas_frame = tk.Frame(root, bg = "white")
 canvas = tk.Canvas(canvas_frame, bg = "white")
 canvas.bind("<Button-1>", left_click)
